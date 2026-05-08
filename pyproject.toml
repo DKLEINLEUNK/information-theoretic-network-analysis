@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infonet"
+version = "0.1.0"
+description = "Information-theoretic network analysis for univariate and multivariate time series"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "jpype1",
+    "tqdm",
+    "pyarrow",
+]
+
+[project.optional-dependencies]
+idtxl = ["idtxl"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
